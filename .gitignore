@@ -1,0 +1,8 @@
+# Jangan pernah masuk ke GitHub
+public/app/config.php
+*.log
+.DS_Store
+
+# Isi folder unggahan tidak ikut, tapi aturan keamanannya ikut
+public/unggah/*
+!public/unggah/.htaccess
