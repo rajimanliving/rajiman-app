@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#12383c">
+<title>Rajiman Living — Kos nyaman di Denpasar</title>
+<meta name="description" content="Rajiman Living — kos bersih dan aman di Denpasar, Bali. Cek kamar kosong, survei gratis, daftar dari HP, dan kelola tagihan sewa lewat portal penghuni.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f1f6f3; --tx:#10343a; --mut:#5b7578; --bd:#e2ebe6; --card:#fff;
+  --deep:#12383c; --lime:#c8f251; --krem:#fff8f1;
+  --ok:#157a3f; --ok-bg:#dcfce7; --warn:#b45309; --warn-bg:#fff0dc;
+  --ring:0 8px 30px rgba(16,52,58,.08);
+  --sh:0 1px 2px rgba(16,52,58,.04), 0 10px 30px rgba(16,52,58,.07);
+  --hero:radial-gradient(circle at 20% 20%, #2b6a70 0, rgba(0,0,0,0) 55%), linear-gradient(135deg,#1f5359 0%,#0f3335 100%);
+  --max:1280px; --navh:68px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:104px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.55}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 36px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:#3e8c4e}
+h2.t{margin:8px 0 10px;font-size:clamp(27px,3.6vw,42px);line-height:1.1;letter-spacing:-.025em;font-weight:800}
+p.sub{margin:0;color:var(--mut);max-width:58ch}
+
+/* ============ HEADER ============ */
+.top{position:sticky;top:12px;z-index:60;margin-top:12px;padding:0 36px}
+.bar{max-width:var(--max);margin:0 auto;height:var(--navh);display:flex;align-items:center;justify-content:space-between;gap:14px;
+  background:rgba(255,255,255,.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:999px;padding:0 10px 0 12px;box-shadow:var(--ring)}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:21px;letter-spacing:-.02em;white-space:nowrap}
+.brand .mk{position:relative;flex:none;width:46px;height:46px;border-radius:50%;background:var(--deep);display:grid;place-items:center}
+.brand .mk img{width:26px;filter:brightness(0) invert(1)}
+.brand .mk i{position:absolute;right:1px;bottom:3px;width:11px;height:11px;border-radius:50%;background:var(--lime);border:2.5px solid #fff}
+.brand b{color:#3e8c4e;font-weight:800}
+.nav{display:flex;gap:2px;background:var(--krem);border-radius:999px;padding:5px}
+.nav a{padding:10px 18px;border-radius:999px;font-weight:600;font-size:15px;color:var(--mut);transition:.18s}
+.nav a:hover{color:var(--tx)}
+.nav a.on{background:var(--deep);color:#fff}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--deep);color:#fff;border-radius:999px;padding:7px 7px 7px 20px;font-weight:700;font-size:15px;white-space:nowrap}
+.cta u{text-decoration:none;font-weight:500;opacity:.78}
+.cta .ar{width:36px;height:36px;border-radius:50%;background:var(--lime);color:var(--deep);display:grid;place-items:center;font-size:17px}
+
+/* ============ HERO ============ */
+.hero{padding:20px 0 0}
+.heroCard{position:relative;overflow:hidden;border-radius:32px;background:var(--hero);color:#fff;padding:72px 80px;
+  display:grid;grid-template-columns:minmax(0,1fr) 443px;gap:48px;align-items:center}
+.heroCard::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.085) 1.2px,transparent 1.4px);background-size:24px 24px;
+  -webkit-mask-image:linear-gradient(115deg,#000,transparent 72%);mask-image:linear-gradient(115deg,#000,transparent 72%)}
+.heroCard .blob{position:absolute;top:-96px;right:-56px;width:368px;height:368px;border-radius:50%;background:var(--lime)}
+.heroL{position:relative;z-index:1;min-width:0}
+.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.26);background:rgba(255,255,255,.07);border-radius:999px;padding:9px 17px;font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.pill svg{width:14px;height:14px;stroke:var(--lime);fill:none;stroke-width:2}
+.hero h1{margin:24px 0 16px;font-size:clamp(42px,5.6vw,74px);line-height:1;letter-spacing:-.04em;font-weight:800}
+.hero h1 em{display:block;font-style:normal;color:var(--lime)}
+.hero p.lead{margin:0 0 30px;font-size:clamp(16px,1.35vw,19px);color:rgba(255,255,255,.8);max-width:40ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:15px 27px;font-weight:700;font-size:16px;border:1.5px solid transparent;transition:.18s}
+.btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.btn.lime{background:var(--lime);color:var(--deep)}
+.btn.lime:hover{background:#d4f56f}
+.btn.ghost{border-color:rgba(255,255,255,.38);color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+.btn.dark{background:var(--deep);color:#fff}
+.btn.dark:hover{background:#17464b}
+
+/* kartu cek kamar */
+.cek{position:relative;z-index:1;background:#fff;color:var(--tx);border-radius:26px;padding:24px;box-shadow:0 22px 48px rgba(8,30,33,.26)}
+.cek-h{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px}
+.cek-h h3{margin:0;font-size:21px;letter-spacing:-.02em}
+.live{display:inline-flex;align-items:center;gap:7px;background:var(--ok-bg);color:var(--ok);border-radius:999px;padding:6px 13px;font-size:12px;font-weight:700;white-space:nowrap;flex:none}
+.live i{width:7px;height:7px;border-radius:50%;background:var(--ok);display:block;flex:none}
+.cek label{display:block;font-size:14px;font-weight:700;margin-bottom:6px}
+.cek label span{font-weight:500;color:var(--mut);font-size:12.5px}
+.cek input,.cek select{width:100%;height:48px;padding:0 14px;border:1px solid var(--bd);border-radius:14px;background:#fff}
+.cek input::placeholder{color:#9bb0b2}
+.cek input:focus,.cek select:focus{outline:0;border-color:var(--deep);box-shadow:0 0 0 4px rgba(18,56,60,.1)}
+.hint{color:var(--mut);font-size:12.5px;margin:9px 0 0}
+.cek .duo{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:18px}
+.cek .go{width:100%;margin-top:18px;height:48px;border:0;border-radius:14px;background:var(--deep);color:#fff;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:9px}
+.cek .go:hover{background:#17464b}
+.cek .go svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2.2}
+.cnt{text-align:center;margin:14px 0 0;font-size:14px;color:var(--mut)}
+.cnt b{color:var(--tx)}
+.cek hr{border:0;border-top:1px solid var(--bd);margin:16px 0 13px}
+.free{display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--mut);margin:0}
+.free svg{width:17px;height:17px;flex:none;stroke:var(--ok);fill:none;stroke-width:2}
+
+/* ============ HUNIAN ============ */
+section{padding:60px 0}
+.head{margin-bottom:24px}
+.chips{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+.chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--bd);background:#fff;border-radius:999px;padding:9px 16px;font-weight:600;font-size:14.5px;color:var(--mut);transition:.18s}
+.chip em{font-style:normal;font-size:12px;font-weight:800;background:rgba(16,52,58,.08);border-radius:999px;padding:2px 8px}
+.chip.on{background:var(--deep);border-color:var(--deep);color:#fff}
+.chip.on em{background:rgba(255,255,255,.22)}
+.props{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.prop{background:var(--card);border:1px solid var(--bd);border-radius:26px;overflow:hidden;box-shadow:var(--sh);display:flex;flex-direction:column}
+.gal{position:relative;background:#dfe9e3}
+.strip{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;aspect-ratio:4/3}
+.strip::-webkit-scrollbar{display:none}
+.strip img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:center}
+.gal .bdg{position:absolute;left:14px;top:14px;display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:6px 13px;font-size:12.5px;font-weight:800;background:rgba(255,255,255,.95);box-shadow:0 4px 14px rgba(0,0,0,.16)}
+.gal .bdg i{width:7px;height:7px;border-radius:50%;display:block}
+.bdg.free-b{color:var(--ok)} .bdg.free-b i{background:var(--ok)}
+.bdg.full-b{color:var(--warn)} .bdg.full-b i{background:var(--warn)}
+.gal .num{position:absolute;right:14px;bottom:14px;background:rgba(10,30,33,.6);color:#fff;border-radius:999px;padding:4px 11px;font-size:12px;font-weight:700}
+.dots{position:absolute;left:0;right:0;bottom:16px;display:flex;justify-content:center;gap:6px}
+.dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.55);transition:.2s}
+.dots i.on{background:#fff;width:20px;border-radius:999px}
+.prop .body{padding:22px;display:flex;flex-direction:column;gap:14px;flex:1}
+.prop h3{margin:0;font-size:22px;letter-spacing:-.02em}
+.addr{display:flex;gap:8px;color:var(--mut);font-size:13.5px;line-height:1.45;margin:0}
+.addr svg{width:15px;height:15px;flex:none;margin-top:3px;stroke:currentColor;fill:none;stroke-width:1.9}
+.fas{display:flex;flex-wrap:wrap;gap:7px}
+.fas span{background:var(--krem);border:1px solid var(--bd);border-radius:999px;padding:5px 12px;font-size:12.5px;color:var(--mut);font-weight:600}
+.avail{border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:13px 0}
+.avail small{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#3e8c4e}
+.avail b{font-size:16px}
+.note{border-radius:16px;padding:13px 15px;font-size:13.5px}
+.note.full-n{background:var(--warn-bg);color:#8a4b07}
+.note.free-n{background:var(--ok-bg);color:#115e32}
+.note b{display:block;margin-bottom:2px}
+.foot{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:auto;flex-wrap:wrap}
+.price small{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#3e8c4e}
+.price b{font-size:25px;letter-spacing:-.02em}
+.price span{font-size:13px;color:var(--mut)}
+.acts{display:flex;gap:9px}
+.mini{display:inline-flex;align-items:center;gap:7px;border-radius:14px;padding:11px 18px;font-weight:700;font-size:14.5px;border:1px solid var(--bd);background:#fff}
+.mini.dk{background:var(--deep);border-color:var(--deep);color:#fff}
+.mini svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+
+/* ============ PORTAL ============ */
+.portal{position:relative;overflow:hidden;border-radius:32px;background:var(--hero);color:#fff;padding:56px 60px;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:44px;align-items:center}
+.portal::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 1.2px,transparent 1.4px);background-size:24px 24px;
+  -webkit-mask-image:linear-gradient(115deg,#000,transparent 70%);mask-image:linear-gradient(115deg,#000,transparent 70%)}
+.portal .blob{position:absolute;right:-70px;bottom:-110px;width:320px;height:320px;border-radius:50%;background:var(--lime)}
+.portal .in{position:relative;z-index:1}
+.portal .eyebrow{color:var(--lime)}
+.portal h2{margin:8px 0 10px;font-size:clamp(27px,3.1vw,40px);line-height:1.1;letter-spacing:-.025em}
+.portal p{margin:0 0 26px;color:rgba(255,255,255,.78);max-width:42ch}
+.feats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:26px}
+.feat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:14px}
+.feat i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--lime);color:var(--deep);margin-bottom:9px}
+.feat i svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.feat b{display:block;font-size:14.5px;margin-bottom:2px}
+.feat span{display:block;font-size:12.5px;color:rgba(255,255,255,.72);line-height:1.4}
+.phoneBox{position:relative;z-index:1;display:flex;justify-content:center;padding:28px 0 44px}
+.tagp{position:absolute;z-index:3;right:0;top:0;background:rgba(255,255,255,.17);border-radius:999px;padding:6px 14px;font-size:12px;font-weight:700}
+.phone{position:relative;z-index:1;width:min(272px,100%);background:#0b2629;border-radius:40px;padding:10px;box-shadow:0 34px 64px rgba(0,0,0,.38)}
+.screen{background:#f5f9f6;border-radius:32px;padding:16px 14px 18px;color:var(--tx)}
+.notch{width:92px;height:20px;border-radius:0 0 12px 12px;background:#0b2629;margin:-6px auto 12px}
+.hi{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.hi b{font-size:15px}.hi small{display:block;font-size:11px;color:var(--mut)}
+.av{flex:none;width:32px;height:32px;border-radius:50%;background:var(--deep);color:var(--lime);display:grid;place-items:center;font-weight:800;font-size:13px}
+.bill{margin:12px 0 10px;background:var(--deep);color:#fff;border-radius:18px;padding:14px}
+.bill small{opacity:.72;font-size:11px}
+.bill b{display:block;font-size:25px;letter-spacing:-.025em;margin:2px 0 9px}
+.bill .r{display:flex;align-items:center;justify-content:space-between;font-size:11px}
+.bill .r em{font-style:normal;background:var(--lime);color:var(--deep);border-radius:999px;padding:5px 15px;font-weight:800}
+.m3{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:9px}
+.m3 div{background:#fff;border:1px solid var(--bd);border-radius:13px;padding:9px 3px;text-align:center;font-size:10.5px;font-weight:700}
+.row2{background:#fff;border:1px solid var(--bd);border-radius:13px;padding:10px 12px;font-size:11.5px;display:flex;justify-content:space-between;gap:8px;margin-top:6px}
+.row2 em{font-style:normal;font-weight:800;color:var(--warn)}
+.float{position:absolute;z-index:3;display:flex;align-items:center;gap:8px;background:#fff;color:var(--tx);border-radius:999px;padding:9px 16px;font-size:12.5px;font-weight:700;box-shadow:0 12px 28px rgba(0,0,0,.24);white-space:nowrap}
+.float i{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ok-bg);color:var(--ok)}
+.float i svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.6}
+.float.a{left:-10px;top:52px}
+.float.b{right:-10px;bottom:16px}
+.float.b i{background:var(--warn-bg);color:var(--warn)}
+
+/* ============ CARA SEWA ============ */
+.cara{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+.stepper{display:flex;margin:24px 0 20px}
+.stepper button{flex:1;display:flex;flex-direction:column;align-items:center;gap:7px;background:none;border:0;padding:0;font-size:12.5px;font-weight:700;color:var(--mut);position:relative}
+.stepper button::before{content:"";position:absolute;top:19px;left:calc(-50% + 20px);right:calc(50% + 20px);height:2px;background:var(--bd)}
+.stepper button:first-child::before{display:none}
+.stepper .n{width:38px;height:38px;border-radius:50%;background:#fff;border:1px solid var(--bd);display:grid;place-items:center;font-weight:800;font-size:15px;color:var(--tx);transition:.2s}
+.stepper button.on{color:var(--tx)}
+.stepper button.on .n{background:var(--lime);border-color:var(--lime)}
+.stepper button.done .n{background:var(--deep);border-color:var(--deep);color:#fff}
+.stepBox{background:#fff;border:1px solid var(--bd);border-radius:22px;padding:22px;box-shadow:var(--sh)}
+.stepBox .lh{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+.stepBox h3{margin:0;font-size:19px;letter-spacing:-.015em}
+.stepBox .lb{background:var(--krem);border:1px solid var(--bd);border-radius:999px;padding:5px 12px;font-size:11.5px;font-weight:700;color:var(--mut);white-space:nowrap}
+.stepBox p{margin:0;color:var(--mut);font-size:14.5px}
+.stepBox .nx{margin-top:18px}
+.stage{position:relative;overflow:hidden;border-radius:30px;min-height:460px;background:linear-gradient(135deg,#1f5359,#0f3335);display:flex;align-items:center;justify-content:center;padding:30px}
+.stage::before{content:"";position:absolute;right:-56px;top:-56px;width:190px;height:190px;border-radius:50%;background:var(--lime)}
+.stage::after{content:"";position:absolute;left:-60px;bottom:-60px;width:180px;height:180px;border-radius:50%;background:#d9a77c}
+.stage .tg{position:absolute;z-index:2;left:18px;top:18px;background:rgba(255,255,255,.17);color:#fff;border-radius:999px;padding:6px 14px;font-size:12px;font-weight:700}
+.demo{position:relative;z-index:1;width:100%;max-width:378px;background:#fff;border-radius:22px;padding:20px;box-shadow:0 22px 48px rgba(0,0,0,.26)}
+.demo h4{margin:0 0 3px;font-size:18px;letter-spacing:-.015em}
+.demo small{color:var(--mut)}
+.dr{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#f4f8f5;border-radius:14px;padding:12px 14px;margin-top:10px;font-size:14px}
+.okp{background:var(--ok-bg);color:var(--ok);border-radius:999px;padding:3px 12px;font-size:12px;font-weight:800;white-space:nowrap}
+.wa-h{display:flex;align-items:center;gap:10px;padding-bottom:12px;border-bottom:1px solid var(--bd)}
+.bub{max-width:84%;border-radius:18px;padding:11px 14px;font-size:14px;margin-top:11px;line-height:1.45}
+.bub.me{margin-left:auto;background:var(--lime);color:var(--deep);border-bottom-right-radius:6px}
+.bub.you{background:#eef3ef;border-bottom-left-radius:6px}
+.sig{margin-top:12px;border:1.5px dashed #b6c9c3;border-radius:16px;padding:20px;text-align:center;font:italic 27px Georgia,serif;color:#33504f}
+
+/* ============ PANDUAN ============ */
+.panduan{max-width:896px;margin:0 auto}
+.ftabs{display:flex;gap:8px;overflow-x:auto;padding:4px 0 16px;scrollbar-width:none}
+.ftabs::-webkit-scrollbar{display:none}
+.ftabs .chip{flex:none}
+.faq{background:#fff;border:1px solid var(--bd);border-radius:24px;overflow:hidden;box-shadow:var(--sh)}
+.q{border-top:1px solid var(--bd)}
+.q:first-child{border-top:0}
+.q>button{width:100%;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;background:none;border:0;padding:19px 22px;text-align:left}
+.q .cat{display:block;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#3e8c4e;margin-bottom:4px}
+.q .qt{font-weight:700;font-size:16px;letter-spacing:-.01em}
+.q .ic{flex:none;width:30px;height:30px;border-radius:50%;background:#eef3ef;display:grid;place-items:center;transition:.22s;margin-top:6px}
+.q .ic svg{width:15px;height:15px;stroke:var(--tx);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.q.open .ic{background:var(--lime);transform:rotate(180deg)}
+.q .a{display:none;padding:0 68px 20px 22px;color:var(--mut);font-size:15px}
+.q.open .a{display:block}
+.more{display:block;width:100%;margin-top:14px;background:#fff;border:1px solid var(--bd);border-radius:16px;padding:14px;font-weight:700;color:var(--tx)}
+.ask{margin-top:18px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:var(--deep);color:#fff;border-radius:22px;padding:20px 24px}
+.ask small{display:block;opacity:.76;font-weight:500}
+
+/* ============ CTA + FOOTER ============ */
+.cta2{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:#fff;border:1px solid var(--bd);border-radius:26px;padding:26px 30px;box-shadow:var(--sh)}
+.cta2 h3{margin:0 0 4px;font-size:21px;letter-spacing:-.02em}
+.cta2 p{margin:0;color:var(--mut);font-size:14.5px}
+footer{padding:28px 0 56px;color:var(--mut);font-size:14px;text-align:center}
+
+/* ============ VERSI HP ============ */
+.tabbar{display:none}
+.wa-fab{display:none}
+
+@media (max-width:1023px){
+  .wrap{padding:0 20px}
+  .top{padding:0 16px}
+  .heroCard{grid-template-columns:1fr;gap:28px;padding:40px 32px}
+  .portal{grid-template-columns:1fr;gap:28px;padding:40px 32px}
+  .feats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cara{grid-template-columns:1fr;gap:28px}
+  .props{grid-template-columns:1fr}
+  .stage{min-height:380px}
+}
+
+@media (max-width:719px){
+  :root{--navh:60px}
+  html{scroll-padding-top:88px}
+  section{padding:40px 0}
+  .wrap{padding:0 16px}
+  .nav{display:none}
+  .cta u{display:none}
+  .cta{padding:6px 6px 6px 16px;font-size:14.5px}
+  .brand{font-size:19px}
+  .brand .mk{width:40px;height:40px}
+  .brand .mk img{width:23px}
+
+  .hero{padding-top:14px}
+  .heroCard{padding:30px 22px 34px;border-radius:28px}
+  .heroCard .blob{width:196px;height:196px;top:-86px;right:-74px}
+  .hero h1{margin:20px 0 12px}
+  .cek-h{margin-bottom:16px}
+  .cek-h h3{font-size:18px;white-space:nowrap}
+  .live{padding:5px 11px;font-size:11.5px}
+  .hero p.lead{margin-bottom:22px;font-size:16px}
+  .btns{flex-direction:column;align-items:stretch}
+  .btn{width:100%}
+  .cek{padding:20px;border-radius:22px}
+  .cek .duo{grid-template-columns:1fr}
+
+  .portal{padding:30px 22px 34px;border-radius:28px}
+  .feats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .feat{padding:12px}
+  .feat i{width:30px;height:30px;margin-bottom:8px}
+  .feat b{font-size:13.5px;line-height:1.25}
+  .feat span{font-size:11.5px}
+  .phoneBox{padding:22px 0 40px}
+  .float.a{left:-4px;top:40px}
+  .float.b{right:-4px;bottom:10px}
+
+  .stage{min-height:0;padding:22px;border-radius:26px}
+  .stepper button::before{left:calc(-50% + 18px);right:calc(50% + 18px)}
+  .q .a{padding-right:22px}
+  .cta2{padding:22px;border-radius:22px}
+  .cta2 .btn{width:100%}
+
+  footer{padding-bottom:120px}
+  .tabbar{display:flex;position:fixed;z-index:58;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));
+    background:rgba(255,255,255,.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:26px;padding:8px 4px;box-shadow:0 14px 34px rgba(16,52,58,.18)}
+  .tabbar a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10.5px;font-weight:700;color:var(--mut);padding:5px 0}
+  .tabbar a .ic{display:grid;place-items:center;width:46px;height:26px;border-radius:999px;transition:.2s}
+  .tabbar a svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+  .tabbar a.on{color:var(--deep)}
+  .tabbar a.on .ic{background:var(--lime)}
+  .wa-fab{display:grid;place-items:center;position:fixed;z-index:57;right:16px;bottom:96px;width:54px;height:54px;border-radius:50%;
+    background:var(--deep);color:var(--lime);box-shadow:0 14px 30px rgba(16,52,58,.34)}
+  .wa-fab svg{width:25px;height:25px;stroke:currentColor;fill:none;stroke-width:2}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="bar">
+    <a class="brand" href="#beranda" aria-label="Rajiman Living">
+      <span class="mk"><img src="assets/logo.png" alt=""><i></i></span>
+      <span>Rajiman <b>Living</b></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Menu utama">
+      <a href="#beranda" class="on">Beranda</a>
+      <a href="#hunian">Hunian</a>
+      <a href="#portal">Portal</a>
+      <a href="#cara">Cara sewa</a>
+      <a href="#panduan">Panduan</a>
+    </nav>
+    <a class="cta" href="app/">Masuk <u>/ Daftar</u><span class="ar">&#8594;</span></a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ BERANDA ============ -->
+<section class="hero" id="beranda">
+  <div class="wrap">
+    <div class="heroCard">
+      <div class="blob"></div>
+      <div class="heroL">
+        <span class="pill"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span id="kota">Kota Denpasar · Bali</span></span>
+        <h1>Cozy living,<em>safe space.</em></h1>
+        <p class="lead" id="tagline">Kos bersih dan aman, dekat pusat kota. Tinggal chat, kami atur surveinya.</p>
+        <div class="btns">
+          <a class="btn lime" id="waHero" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 20.5l1.6-5.5A8.5 8.5 0 1 1 21 11.5Z"/></svg>Chat WhatsApp</a>
+          <a class="btn ghost" href="#hunian">Lihat hunian <svg viewBox="0 0 24 24"><path d="M12 5v14m0 0-5-5m5 5 5-5"/></svg></a>
+        </div>
+      </div>
+
+      <form class="cek" id="formCek">
+        <div class="cek-h">
+          <h3>Cek kamar kosong</h3>
+          <span class="live"><i></i>Update langsung</span>
+        </div>
+        <label for="dekat">Dekat tempat apa? <span>(boleh dikosongkan)</span></label>
+        <input id="dekat" type="text" maxlength="60" placeholder="Contoh: Universitas Udayana, Sanur" autocomplete="off">
+        <p class="hint">Ketik nama tempat atau daerah, misalnya kampus atau kantor Anda.</p>
+        <div class="duo">
+          <div><label for="masuk">Rencana masuk</label><input id="masuk" type="date"></div>
+          <div><label for="lama">Lama sewa</label>
+            <select id="lama"><option>1 bulan</option><option>3 bulan</option><option>6 bulan</option><option>12 bulan</option></select>
+          </div>
+        </div>
+        <button class="go" type="submit"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Cari kamar</button>
+        <p class="cnt" id="cnt"></p>
+        <hr>
+        <p class="free"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.4 3.4 8.3 8 9 4.6-.7 8-4.6 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>Survei gratis — lihat kamar dulu sebelum bayar.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HUNIAN ============ -->
+<section id="hunian">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Pilih hunian</div>
+      <h2 class="t" id="hunianJudul">Dua lokasi, satu standar kenyamanan</h2>
+      <p class="sub">Geser foto untuk melihat suasana, ketuk kartu untuk detail kamar &amp; harga.</p>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="props" id="props"></div>
+  </div>
+</section>
+
+<!-- ============ PORTAL ============ -->
+<section id="portal">
+  <div class="wrap">
+    <div class="portal">
+      <div class="blob"></div>
+      <div class="in">
+        <div class="eyebrow">Portal penghuni</div>
+        <h2>Semua urusan kos, cukup dari HP</h2>
+        <p>Setelah pindah masuk, kelola sewa lewat akun Rajiman Living — tanpa bolak-balik chat.</p>
+        <div class="feats">
+          <div class="feat"><i><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/></svg></i><b>Tagihan &amp; kuitansi</b><span>Cek tagihan, unduh kuitansi PDF</span></div>
+          <div class="feat"><i><svg viewBox="0 0 24 24"><path d="M21 12a7 7 0 0 1-10.3 6.2L4 20l1.7-5.4A7 7 0 1 1 21 12Z"/></svg></i><b>Lapor &amp; tanya</b><span>Kirim pesan, pantau balasan</span></div>
+          <div class="feat"><i><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="m9 15 2 2 4-4"/></svg></i><b>Kontrak digital</b><span>Tanda tangan langsung dari HP</span></div>
+          <div class="feat"><i><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 1 0-12 0c0 5-2 6-2 6h16s-2-1-2-6"/><path d="M10.5 20a2 2 0 0 0 3 0"/></svg></i><b>Pengingat otomatis</b><span>Email H-3 &amp; saat jatuh tempo</span></div>
+          <div class="feat"><i><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.4 3.4 8.3 8 9 4.6-.7 8-4.6 8-9V6l-8-3Z"/></svg></i><b>Deposit tercatat</b><span>Rinci sampai dikembalikan</span></div>
+          <div class="feat"><i><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></i><b>Perpanjang mudah</b><span>Kabari via Pesan, H-7</span></div>
+        </div>
+        <a class="btn lime" href="app/">Masuk ke portal <svg viewBox="0 0 24 24"><path d="M5 12h14m0 0-5-5m5 5-5 5"/></svg></a>
+      </div>
+
+      <div class="phoneBox">
+        <span class="tagp">Contoh tampilan</span>
+        <span class="float a"><i><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></i>Pembayaran diterima</span>
+        <div class="phone"><div class="screen">
+          <div class="notch"></div>
+          <div class="hi"><div><b>Halo, Putu 👋</b><small>Rajiman Kost 1 · Kamar 05</small></div><span class="av">P</span></div>
+          <div class="bill"><small>Tagihan bulan ini</small><b>Rp 2.300.000</b><div class="r"><span>Jatuh tempo tgl 5</span><em>Bayar</em></div></div>
+          <div class="m3"><div>Kuitansi</div><div>Pesan</div><div>Kontrak</div></div>
+          <div class="row2"><span>Pesan: AC kamar</span><em>Diproses</em></div>
+          <div class="row2"><span>Masa sewa</span><b>Sisa 45 hari</b></div>
+        </div></div>
+        <span class="float b"><i><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 1 0-12 0c0 5-2 6-2 6h16s-2-1-2-6"/></svg></i>Jatuh tempo 3 hari lagi</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CARA SEWA ============ -->
+<section id="cara">
+  <div class="wrap cara">
+    <div>
+      <div class="eyebrow">Cara sewa</div>
+      <h2 class="t">Dari chat sampai pegang kunci, empat langkah saja.</h2>
+      <div class="stepper" id="stepper"></div>
+      <div class="stepBox" id="stepBox"></div>
+    </div>
+    <div class="stage"><span class="tg">Contoh tampilan</span><div class="demo" id="demo"></div></div>
+  </div>
+</section>
+
+<!-- ============ PANDUAN ============ -->
+<section id="panduan">
+  <div class="wrap panduan">
+    <div class="eyebrow">Panduan</div>
+    <h2 class="t">Pertanyaan yang sering ditanyakan</h2>
+    <div class="ftabs" id="ftabs"></div>
+    <div class="faq" id="faq"></div>
+    <button class="more" id="more" type="button"></button>
+    <div class="ask">
+      <div><b>Belum terjawab?</b><small>Tanya pengelola lewat WhatsApp.</small></div>
+      <a class="btn lime" id="waAsk" href="#" target="_blank" rel="noopener">Tanya pengelola</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta2">
+      <div><h3>Sudah jadi penghuni?</h3><p>Cek tagihan, lapor kerusakan, dan lihat kontrak dari akun Anda.</p></div>
+      <a class="btn dark" href="app/">Masuk ke portal <svg viewBox="0 0 24 24"><path d="M5 12h14m0 0-5-5m5 5-5 5"/></svg></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer><div class="wrap">© <span id="yr"></span> Rajiman Living · rajimanliving.com</div></footer>
+
+<a class="wa-fab" id="waFab" href="#" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 20.5l1.6-5.5A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+</a>
+
+<nav class="tabbar" aria-label="Menu bawah">
+  <a href="#beranda" class="on"><span class="ic"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>Beranda</a>
+  <a href="#hunian"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 18v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5"/><path d="M6 11V8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/></svg></span>Hunian</a>
+  <a href="#cara"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m11 12 8-8 2 2-2 2 2 2-3 3-2-2"/></svg></span>Cara sewa</a>
+  <a href="#panduan"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.6 2.6 0 0 1 5 .9c0 1.8-2.5 2.1-2.5 3.6"/><path d="M12 17.5h.01"/></svg></span>Bantuan</a>
+  <a href="app/"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c.8-3.5 3.6-5.5 7-5.5s6.2 2 7 5.5"/></svg></span>Masuk</a>
+</nav>
+
+<script>
+/* =======================================================================
+   PENGATURAN — ubah bagian ini saja, lalu unggah ulang index.html
+   ======================================================================= */
+var CONFIG = {
+  kota: "Kota Denpasar · Bali",
+  tagline: "Kos bersih dan aman, dekat pusat kota. Tinggal chat, kami atur surveinya.",
+
+  /* GANTI: nomor WhatsApp pengelola. Format 62xxxxxxxxxx, tanpa + dan tanpa spasi. */
+  wa: "6281234567890",
+
+  /* Foto diambil dari Google Drive Anda (sama seperti yang dipakai aplikasi).
+     Agar tampil di situs, file di Drive harus dibagikan "Siapa saja yang memiliki link". */
+  properti: [
+    {
+      nama: "Rajiman Kost 1",
+      alamat: "Kos, Gg. IVA No.7 BLOK A2, Penatih, Kec. Denpasar Tim., Kota Denpasar, Bali 80237",
+      fasilitas: ["Wi-Fi", "AC", "Kamar mandi dalam", "Parkir motor"],
+      kosong: 0,
+      total: 3,
+      harga: 2300000,
+      foto: [
+        "1cl1jIkunnvzhgj5nH8qLh1jH6vHsxcSd",
+        "1fmAcGtmFpBRjXKYnaDrtxPHcnoHASaX9",
+        "1ktQ7Z31k2DqYiQvydPpXuW9EBl_Gw4wR",
+        "1UAo7-QE6r8xEmOmIMRe5UUT5ALIEIlu5"
+      ]
+    },
+    {
+      nama: "Rajiman Kost 2",
+      alamat: "Kota Denpasar, Bali",
+      fasilitas: [],
+      kosong: 0,
+      total: 0,
+      harga: 0,
+      foto: [
+        "1H6QJ3l4KHKe0sBg8t9l5gIrOXdBWNEjx",
+        "1-wy7Hec9lVeFlS8dHKAp3BZ6eXm6LaPW"
+      ]
+    }
+  ],
+
+  faq: [
+    ["Survei & daftar", "Apakah bisa survei dulu sebelum bayar?", "Bisa, survei gratis. Chat WhatsApp pengelola untuk atur jadwal lihat kamar."],
+    ["Pembayaran", "Bagaimana cara membayar sewa?", "Transfer sesuai rekening di faktur (atau QRIS bila tersedia). Setelah dicatat pengelola, kuitansi PDF langsung tersedia di portal."],
+    ["Masa sewa", "Bisa sewa 3, 6, atau 12 bulan?", "Bisa. Pilih lama sewa saat cek kamar untuk melihat estimasi biaya; paket 6/12 bulan bisa lebih hemat."],
+    ["Survei & daftar", "Dokumen apa yang perlu disiapkan?", "KTP asli untuk difoto, swafoto memegang KTP, dan nomor kontak darurat."],
+    ["Masa sewa", "Bagaimana kalau mau perpanjang atau berhenti?", "Kabari pengelola lewat menu Pesan di portal paling lambat 7 hari sebelum masa sewa berakhir."],
+    ["Survei & daftar", "Bisa daftar tanpa datang langsung?", "Bisa. Daftar online dari HP: buat akun, isi data diri, pilih kamar, lalu unggah foto KTP dan swafoto. Pengelola akan memverifikasi pengajuan Anda."],
+    ["Pembayaran", "Apakah wajib kirim bukti transfer?", "Tidak wajib. Tekan “Saya sudah bayar” di portal; bukti transfer boleh dilampirkan agar pengecekan lebih cepat."],
+    ["Pembayaran", "Bagaimana dengan uang deposit?", "Deposit dibayar di awal sesuai perjanjian, tercatat dengan kuitansi, dan dikembalikan saat keluar. Bila ada potongan, alasannya dicantumkan."],
+    ["Masa sewa", "Kapan tagihan bulanan terbit?", "Tagihan dibuat otomatis mengikuti tanggal sewa Anda, plus email pengingat 3 hari sebelum dan pada hari jatuh tempo."]
+  ]
+};
+/* ===================== batas pengaturan ===================== */
+
+var $ = function (s, r) { return (r || document).querySelector(s); };
+var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; }); };
+var rp = function (n) { return 'Rp ' + Math.round(Number(n) || 0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); };
+var foto = function (id) { return 'https://drive.google.com/thumbnail?id=' + encodeURIComponent(id) + '&sz=w1100'; };
+function wa(teks) { return 'https://wa.me/' + CONFIG.wa + '?text=' + encodeURIComponent(teks); }
+
+$('#kota').textContent = CONFIG.kota;
+$('#tagline').textContent = CONFIG.tagline;
+$('#yr').textContent = new Date().getFullYear();
+var waUmum = wa('Halo Rajiman Living, saya mau tanya kamar kos dan jadwal survei.');
+['waHero', 'waAsk', 'waFab'].forEach(function (id) { var e = $('#' + id); if (e) e.href = waUmum; });
+
+/* ---------- ringkasan ketersediaan ---------- */
+var P = CONFIG.properti;
+var totalKosong = P.reduce(function (a, p) { return a + (p.kosong || 0); }, 0);
+var nTersedia = P.filter(function (p) { return (p.kosong || 0) > 0; }).length;
+$('#cnt').innerHTML = '<b>' + totalKosong + '</b> kamar tersedia saat ini';
+$('#hunianJudul').textContent = (P.length === 2 ? 'Dua lokasi' : P.length + ' lokasi') + ', satu standar kenyamanan';
+
+/* ---------- form cek kamar ---------- */
+$('#formCek').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var dekat = $('#dekat').value.trim(), masuk = $('#masuk').value, lama = $('#lama').value;
+  var pesan = 'Halo Rajiman Living, saya mau cek kamar kosong.';
+  if (dekat) pesan += '\nDekat: ' + dekat;
+  if (masuk) { var d = masuk.split('-'); pesan += '\nRencana masuk: ' + d[2] + '-' + d[1] + '-' + d[0]; }
+  pesan += '\nLama sewa: ' + lama;
+  pesan += totalKosong > 0 ? '\nDi situs tertulis ada ' + totalKosong + ' kamar kosong.' : '\nSaya mau gabung daftar tunggu kalau sedang penuh.';
+  window.open(wa(pesan), '_blank', 'noopener');
+  document.getElementById('hunian').scrollIntoView({ behavior: 'smooth' });
+});
+
+/* ---------- kartu hunian ---------- */
+var filter = 'semua';
+function gambarHunian() {
+  var daftar = P.filter(function (p) {
+    return filter === 'semua' || (filter === 'tersedia' ? (p.kosong || 0) > 0 : (p.kosong || 0) === 0);
+  });
+
+  $('#chips').innerHTML = [
+    ['semua', 'Semua', P.length],
+    ['tersedia', 'Tersedia', nTersedia],
+    ['penuh', 'Penuh', P.length - nTersedia]
+  ].map(function (c) {
+    return '<button type="button" class="chip' + (filter === c[0] ? ' on' : '') + '" data-f="' + c[0] + '">' + c[1] + ' <em>' + c[2] + '</em></button>';
+  }).join('');
+
+  $('#props').innerHTML = daftar.length ? daftar.map(function (p, i) {
+    var bebas = (p.kosong || 0) > 0;
+    var fotos = (p.foto || []).filter(Boolean);
+    var gal = fotos.length
+      ? '<div class="strip" data-strip>' + fotos.map(function (f, k) {
+          return '<img src="' + foto(f) + '" alt="' + esc(p.nama) + ' foto ' + (k + 1) + '" loading="' + (i === 0 && k === 0 ? 'eager' : 'lazy') + '" referrerpolicy="no-referrer">';
+        }).join('') + '</div>'
+        + (fotos.length > 1 ? '<div class="dots" data-dots>' + fotos.map(function (_, k) { return '<i class="' + (k === 0 ? 'on' : '') + '"></i>'; }).join('') + '</div>'
+           + '<span class="num" data-num>1/' + fotos.length + '</span>' : '')
+      : '<div class="strip"><div style="flex:0 0 100%;display:grid;place-items:center;color:#7d9a94;font-weight:600">Foto belum ditambahkan</div></div>';
+
+    return '<article class="prop">'
+      + '<div class="gal">' + gal
+      + '<span class="bdg ' + (bebas ? 'free-b' : 'full-b') + '"><i></i>' + (bebas ? 'Tersedia' : 'Penuh') + '</span></div>'
+      + '<div class="body">'
+      + '<h3>' + esc(p.nama) + '</h3>'
+      + '<p class="addr"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>' + esc(p.alamat) + '</p>'
+      + ((p.fasilitas || []).length ? '<div class="fas">' + p.fasilitas.map(function (f) { return '<span>' + esc(f) + '</span>'; }).join('') + '</div>' : '')
+      + '<div class="avail"><small>Kamar tersedia</small><b>' + (p.kosong || 0) + ' dari ' + (p.total || 0) + ' kamar</b></div>'
+      + '<div class="note ' + (bebas ? 'free-n' : 'full-n') + '"><b>' + (bebas ? 'Masih ada kamar kosong' : 'Semua kamar sedang terisi') + '</b>'
+      + (bebas ? 'Ketuk Daftar untuk memesan, atau chat dulu untuk survei.' : 'Gabung daftar tunggu, kami kabari saat ada yang kosong.') + '</div>'
+      + '<div class="foot">'
+      + (p.harga ? '<div class="price"><small>Mulai</small><b>' + rp(p.harga) + '</b> <span>/bulan</span></div>'
+                 : '<div class="price"><span>Hubungi pengelola</span></div>')
+      + '<div class="acts">'
+      + '<a class="mini" target="_blank" rel="noopener" href="' + wa('Halo, saya mau tanya detail ' + p.nama + '.') + '">Detail</a>'
+      + (bebas
+          ? '<a class="mini dk" href="app/">Daftar <svg viewBox="0 0 24 24"><path d="M5 12h14m0 0-5-5m5 5-5 5"/></svg></a>'
+          : '<a class="mini dk" target="_blank" rel="noopener" href="' + wa('Halo, tolong kabari saya kalau ada kamar kosong di ' + p.nama + '.') + '"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 1 0-12 0c0 5-2 6-2 6h16s-2-1-2-6"/><path d="M10.5 20a2 2 0 0 0 3 0"/></svg>Kabari</a>')
+      + '</div></div></div></article>';
+  }).join('') : '<p class="sub">Tidak ada hunian untuk filter ini.</p>';
+
+  $$('[data-strip]').forEach(function (s) {
+    s.addEventListener('scroll', function () {
+      var i = Math.round(s.scrollLeft / s.clientWidth), g = s.parentNode;
+      var dots = g.querySelector('[data-dots]'), num = g.querySelector('[data-num]');
+      if (dots) $$('i', dots).forEach(function (d, k) { d.classList.toggle('on', k === i); });
+      if (num) num.textContent = (i + 1) + '/' + s.children.length;
+    }, { passive: true });
+  });
+}
+gambarHunian();
+
+/* ---------- cara sewa ---------- */
+var LANGKAH = [
+  ['Cek', 'Cek kamar & survei', 'Cek kamar kosong di halaman ini, lalu chat WhatsApp untuk atur jadwal lihat langsung. Survei gratis.',
+    '<div class="wa-h"><span class="av">R</span><div><b>Rajiman Living</b><br><small>WhatsApp</small></div></div>'
+    + '<div class="bub me">Halo, apakah masih ada kamar kosong?</div>'
+    + '<div class="bub you">Saat ini kamar penuh. Mau kami kabari begitu ada yang kosong?</div>'],
+  ['Daftar', 'Daftar online', 'Buat akun penghuni, isi data diri, pilih kamar, lalu unggah foto KTP dan swafoto langsung dari HP.',
+    '<h4>Formulir pendaftaran</h4><small>Data diri, kontak darurat, foto KTP</small>'
+    + '<div class="dr"><span>Nama lengkap</span><b>Putu A.</b></div>'
+    + '<div class="dr"><span>Foto KTP &amp; swafoto</span><span class="okp">Terunggah</span></div>'
+    + '<div class="dr"><span>Akun penghuni</span><span class="okp">Dibuat</span></div>'],
+  ['Tanda', 'Tanda tangan & bayar', 'Perjanjian dikirim lewat email, lalu ditandatangani dan diparaf dari HP. Deposit dan sewa pertama dibayar sesuai perjanjian.',
+    '<h4>Perjanjian sewa</h4><small>Ditandatangani secara digital</small>'
+    + '<div class="dr"><span>Sewa per bulan</span><b>Rp 2.300.000</b></div>'
+    + '<div class="dr"><span>Deposit</span><b>Sesuai perjanjian</b></div>'
+    + '<div class="sig">Putu A.</div>'],
+  ['Pindah', 'Pindah masuk', 'Terima kunci. Tagihan, kuitansi, dan kontrak berikutnya bisa dicek kapan saja dari akun penghuni.',
+    '<h4>Selamat datang!</h4><small>Kamar Anda siap ditempati.</small>'
+    + '<div class="dr"><span>Tagihan bulan ini</span><span class="okp">Lunas</span></div>'
+    + '<div class="dr"><span>Kuitansi PDF</span><b>Unduh</b></div>']
+];
+var aktif = 0;
+function gambarLangkah() {
+  $('#stepper').innerHTML = LANGKAH.map(function (l, i) {
+    return '<button type="button" class="' + (i === aktif ? 'on' : (i < aktif ? 'done' : '')) + '" data-s="' + i + '">'
+      + '<span class="n">' + (i < aktif ? '&#10003;' : (i + 1)) + '</span>' + l[0] + '</button>';
+  }).join('');
+  $('#stepBox').innerHTML = '<div class="lh"><h3>' + LANGKAH[aktif][1] + '</h3><span class="lb">Langkah ' + (aktif + 1) + '/4</span></div>'
+    + '<p>' + LANGKAH[aktif][2] + '</p>'
+    + (aktif < 3 ? '<button class="btn dark nx" type="button" data-next>Langkah berikutnya <svg viewBox="0 0 24 24"><path d="M5 12h14m0 0-5-5m5 5-5 5"/></svg></button>'
+                 : '<a class="btn dark nx" href="app/">Masuk ke portal <svg viewBox="0 0 24 24"><path d="M5 12h14m0 0-5-5m5 5-5 5"/></svg></a>');
+  $('#demo').innerHTML = LANGKAH[aktif][3];
+}
+gambarLangkah();
+
+/* ---------- panduan ---------- */
+var kategori = [];
+CONFIG.faq.forEach(function (f) { if (kategori.indexOf(f[0]) < 0) kategori.push(f[0]); });
+var tabFaq = 'Semua', semua = false;
+function gambarFaq() {
+  $('#ftabs').innerHTML = [['Semua', CONFIG.faq.length]].concat(kategori.map(function (k) {
+    return [k, CONFIG.faq.filter(function (f) { return f[0] === k; }).length];
+  })).map(function (c) {
+    return '<button type="button" class="chip' + (tabFaq === c[0] ? ' on' : '') + '" data-t="' + esc(c[0]) + '">' + esc(c[0]) + ' <em>' + c[1] + '</em></button>';
+  }).join('');
+
+  var list = CONFIG.faq.filter(function (f) { return tabFaq === 'Semua' || f[0] === tabFaq; });
+  var batas = semua ? list.length : Math.min(4, list.length);
+  $('#faq').innerHTML = list.slice(0, batas).map(function (f, i) {
+    return '<div class="q' + (i === 0 ? ' open' : '') + '"><button type="button" aria-expanded="' + (i === 0) + '">'
+      + '<span><span class="cat">' + esc(f[0]) + '</span><span class="qt">' + esc(f[1]) + '</span></span>'
+      + '<span class="ic"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></button>'
+      + '<div class="a">' + esc(f[2]) + '</div></div>';
+  }).join('');
+
+  var sisa = list.length - batas;
+  var b = $('#more');
+  b.hidden = (sisa <= 0 && !semua);
+  b.textContent = sisa > 0 ? 'Lihat ' + sisa + ' pertanyaan lainnya' : 'Tampilkan lebih sedikit';
+}
+gambarFaq();
+
+/* ---------- interaksi ---------- */
+document.addEventListener('click', function (e) {
+  var f = e.target.closest('[data-f]'); if (f) { filter = f.dataset.f; gambarHunian(); return; }
+  var s = e.target.closest('[data-s]'); if (s) { aktif = +s.dataset.s; gambarLangkah(); return; }
+  if (e.target.closest('[data-next]')) { aktif = Math.min(3, aktif + 1); gambarLangkah(); return; }
+  var t = e.target.closest('[data-t]'); if (t) { tabFaq = t.dataset.t; semua = false; gambarFaq(); return; }
+  if (e.target.closest('#more')) { semua = !semua; gambarFaq(); return; }
+  var q = e.target.closest('.q > button');
+  if (q) { var open = q.parentNode.classList.toggle('open'); q.setAttribute('aria-expanded', open); }
+});
+
+/* ---------- menu aktif saat digulir ---------- */
+var io = new IntersectionObserver(function (es) {
+  es.forEach(function (en) {
+    if (!en.isIntersecting) return;
+    var id = '#' + en.target.id;
+    $$('#nav a').forEach(function (a) { a.classList.toggle('on', a.getAttribute('href') === id); });
+    $$('.tabbar a').forEach(function (a) { a.classList.toggle('on', a.getAttribute('href') === id); });
+  });
+}, { rootMargin: '-45% 0px -50% 0px' });
+$$('main section[id]').forEach(function (s) { io.observe(s); });
+</script>
+</body>
+</html>
