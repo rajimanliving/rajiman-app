@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - /bin/cp -R public/. /home/rajb8852/public_html/
+    - /bin/mkdir -p /home/rajb8852/public_html/unggah
+    - /bin/chmod 755 /home/rajb8852/public_html/unggah
