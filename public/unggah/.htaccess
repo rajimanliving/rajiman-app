@@ -1,0 +1,6 @@
+# Folder berkas unggahan (KTP, bukti bayar).
+# Tidak boleh ada skrip yang dijalankan dari sini.
+<FilesMatch "\.(php|phtml|php[0-9]|phar|cgi|pl|py|sh|htaccess)$">
+  Require all denied
+</FilesMatch>
+Options -Indexes
